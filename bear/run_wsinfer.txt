@@ -1,0 +1,20 @@
+export WSINFER_FORCE_CPU=0
+
+export CUDA_VISIBLE_DEVICES=0
+
+32 CPU cores
+
+40 GB GPU memory
+
+Using GPU, increased batch-size and num-workers:
+
+time wsinfer run \
+  --wsi-dir slides/ \
+  --results-dir results1/ \
+  --model breast-tumor-resnet34.tcga-brca \
+  --batch-size 128 \
+  --num-workers 24
+
+real	0m21.116s
+user	2m22.667s
+sys	0m16.288s
